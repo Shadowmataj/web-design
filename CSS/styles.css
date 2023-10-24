@@ -81,7 +81,7 @@ body section {
     position: absolute;
     top: 0px;
     left: 0px;
-    background-size: cover;
+    /* background-size: cover; */
     object-fit: cover;
     z-index: -1;
 }
