@@ -162,6 +162,10 @@ body section article p {
 
 /* Parametros de las secciones de contactos */
 .contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgba(75, 82, 88, 0.695);
     text-align: center;
     font-size: x-large;
