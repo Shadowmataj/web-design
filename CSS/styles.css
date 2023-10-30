@@ -276,7 +276,6 @@ textarea {
     color: white;
     background: linear-gradient(90deg, transparent, black 30%);
     height: 50%;
-    overflow: scroll;
 }
 
 .texto-martis div,
@@ -295,7 +294,6 @@ textarea {
     color: white;
     background: linear-gradient(270deg, transparent, black 30%);
     max-height: 800px;
-    overflow: hidden;
 }
 
 .texto-martis-invertido div,
@@ -304,6 +302,20 @@ textarea {
     max-height: 521px;
     text-align: justify;
 }
+
+.texto-martis div::-webkit-scrollbar, .texto-martis-invertido div::-webkit-scrollbar{
+    width: 5px;
+}
+
+.texto-martis div::-webkit-scrollbar-thumb, .texto-martis-invertido div::-webkit-scrollbar-thumb{
+    background: rgb(32, 153, 190);
+    border-radius: 3px;
+}
+
+.texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover{
+    background: rgb(28, 133, 165);
+}
+
 
 /* Imagenes para las marcas */
 .ESP {
@@ -445,7 +457,7 @@ body footer nav a {
 }
 
 /* mobile */
-@media only screen and (max-width:576px) {
+@media only screen and (max-width:992px){
 
     body header nav div {
         justify-content: center;
@@ -507,7 +519,7 @@ body footer nav a {
     .contenedor_martis_invertido {
         flex-direction: column-reverse;
         margin: 0px;
-        box-shadow: 0px 0px 5px rgb(32, 153, 190);
+        box-shadow: 0px 0px 25px rgb(32, 153, 190);
         overflow: hidden;
     }
 
@@ -526,11 +538,11 @@ body footer nav a {
     }
 
     .texto-martis div {
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
     .texto-martis-invertido div {
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
     .texto-martis div,
@@ -570,10 +582,9 @@ body footer nav a {
     }
 }
 
-
 /* desktop */
 
-@media only screen and (min-width: 576px) {
+@media only screen and (min-width: 993px) {
     body section article p {
         color: black;
         margin: 30px 30% 30px;
@@ -600,16 +611,9 @@ body footer nav a {
         justify-content: center;
     }
 
-    .contenedor_martis {
-        margin: 0px;
+    .contenedor_martis, .contenedor_martis_invertido {
+        margin: 15px 100px 15px;
         box-shadow: 0px 0px 25px rgb(32, 153, 190);
-        overflow: hidden;
-    }
-
-
-    .contenedor_martis_invertido {
-        margin: 0px;
-        box-shadow: 0px 0px 5px rgb(32, 153, 190);
         overflow: hidden;
     }
 
@@ -638,11 +642,12 @@ body footer nav a {
     }
 
     .texto-martis div {
-        grid-row: 3/5;
+        grid-row: 3/6;
         grid-column: 3/5;
         width: 100%;
         align-items: center;
         text-align: justify;
+        overflow-y: scroll;
     }
 
     .texto-martis-invertido h2 {
@@ -660,7 +665,7 @@ body footer nav a {
         align-items: center;
         text-align: justify;
         text-align: justify;
-        overflow: scroll;
+        overflow-y: scroll;
     }
 
     .horizon_devices {
