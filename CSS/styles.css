@@ -483,6 +483,10 @@ body footer nav a {
         text-align: center;
     }
 
+    .video-container {
+        height: 300px;
+    }
+
     body section article p {
         color: black;
         margin: 30px 30% 30px;
