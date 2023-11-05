@@ -1,0 +1,278 @@
+@import "./base/reset";
+@import "./base/typo";
+@import "./utilities/variables";
+@import "./layout/navigation";
+@import "./layout/footer";
+@import "./layout/header";
+@import "./layout/forms";
+@import "./vendors/bootstrap";
+@import "./abstracts/media-querys";
+
+
+/* ancho de todas las secciones */
+body section {
+    width: 100%;
+}
+
+.video-container {
+    width: 100%;
+    height: 800px;
+    position: relative;
+    overflow: hidden;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+}
+
+/* Especificaciones del video principal */
+.video_principal {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    /* background-size: cover; */
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Estructura general de todos los banners */
+.banner {
+    display: flex;
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187));
+    width: 100%;
+    height: 200px;
+    justify-content: center;
+    align-items: center;
+    z-index: -1;
+}
+
+/* Estructura independiente del banner para la pagina de principiantes */
+.banner_principiantes {
+    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187));
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    position: relative;
+    z-index: -1;
+}
+
+.producto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+/* Especificaciones de la presentacion para todos los productos  */
+body section article {
+    display: flex;
+    font-weight: bold;
+    flex-direction: column;
+    flex: 2 2 auto;
+    box-shadow: 0px 0px 5px $color-blueboost;
+    border-radius: 15px;
+    justify-content: center;
+    text-align: center;
+    margin: 30px;
+    width: 500px;
+    color: white;
+
+    &:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        box-shadow: 0px 0px 20px $color-blueboost;
+    }
+}
+
+/* Especificaciones para las imagines de los productos en las cajas de los articulos */
+body section article img {
+    width: 100%;
+    transform: scale(0.5);
+    &:hover {
+        transform: scale(0.7);
+    }
+}
+
+/* Descripcion de la caja de articulos */
+body section article p {
+    margin: 30px 35% 30px;
+    background-color: yellow;
+    color: black;
+    border-radius: 3px;
+}
+
+.contacto-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    border: 2px solid $color-blueboost;
+    min-width: 0px;
+}
+
+
+.martis-container {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Especificaciones generales de los contenedores para marcas y artistas */
+.contenedor_martis {
+    display: flex;
+    margin: 20px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    box-shadow: 0px 0px 25px $color-blueboost;
+    overflow: hidden;
+}
+
+.contenedor_martis_invertido {
+    @extend .contenedor_martis;
+    align-items: flex-end;
+}
+
+.texto-martis {
+    color: white;
+    background: linear-gradient(90deg, transparent, black 30%);
+    height: 50%;
+}
+
+.texto-martis div,
+.texto-martis h2 {
+    max-width: 557px;
+    max-height: 521px;
+    text-align: center;
+}
+
+.texto-martis-invertido {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    color: white;
+    background: linear-gradient(270deg, transparent, black 30%);
+    max-height: 800px;
+}
+
+.texto-martis-invertido div,
+.texto-martis-invertido h2 {
+    max-width: 557px;
+    max-height: 521px;
+    text-align: justify;
+}
+
+.texto-martis div::-webkit-scrollbar,
+.texto-martis-invertido div::-webkit-scrollbar {
+    width: 5px;
+}
+
+.texto-martis div::-webkit-scrollbar-thumb,
+.texto-martis-invertido div::-webkit-scrollbar-thumb {
+    background: $color-blueboost;
+    border-radius: 3px;
+}
+
+.texto-martis div::-webkit-scrollbar-thumb:hover,
+.texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+    background: $color-darkblueboost;
+}
+
+/* Imagenes para las marcas */
+.ESP {
+    background-image: url("../img/Marcas/ESP.jpg");
+}
+@each $item in $var-marcas {
+    .#{$item} {
+        background-image: url("../img/Marcas/#{$item}.webp");
+    }
+}
+@each $item in $var-artistas {
+    @if $item == dann_senderovich {
+        .#{$item} {
+            background-image: url("../img/Artistas/#{$item}.webp");
+            background-position: top;
+        }
+    } 
+    @else if $item == adrian_bosques {
+        .#{$item} {
+            background-image: url("../img/Artistas/#{$item}.webp");
+            background-position: top;
+        }
+    } 
+    @else if $item == glass_mind {
+        .#{$item} {
+            background-image: url("../img/Artistas/#{$item}.webp");
+            background-position: left;
+        }
+    } @else {
+        .#{$item} {
+            background-image: url("../img/Artistas/#{$item}.webp");
+        }
+    }
+}
+
+/* Especificaciones del contenedor principal de la galeria */
+.contenedor_galeria {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187), rgba(0, 0, 0, 0.8));
+}
+
+.img-container {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    margin: 15px 30px 15px;
+    justify-content: center;
+    gap: 5px;
+}
+
+.videos-youtube {
+    display: grid;
+    grid-template-columns: auto auto;
+    grid-template-rows: 300px 300px;
+    width: 100%;
+    margin: 30px;
+    box-shadow: 0px 0px 30px red;
+}
+
+iframe {
+    border: 2px solid red;
+    width: 100%;
+    height: 100%;
+}
+
+/* Especificaciones del contenedor principal de las opiniones */
+.contenedor_opiniones {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-decoration: dashed;
+    width: auto;
+    margin: 15px 30px 45px;
+    gap: 30px;
+}
+
+/* Caracteristicas de las opiniones */
+.opinion {
+    display: flex;
+    flex-direction: column;
+    flex: 2 1 20rem;
+    width: 500px;
+    box-shadow: 5px 5px 10px $color-blueboost;
+    text-align: center;
+}
+
+.opinion p {
+    margin: 0px 30px 15px;
+}
+
+/* Especificaciones de las lineas de separacion */
+hr {
+    height: 2px;
+    width: 100%;
+    background-color: $color-blueboost;
+    border-color: $color-blueboost;
+    border-radius: 3px;
+}

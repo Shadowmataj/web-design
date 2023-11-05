@@ -1,0 +1,23 @@
+/* Especificaciones del pie de pagina */
+body footer {
+    text-align: center;
+    color: white;
+    background-color: $color-blueboost;
+    margin: -10px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    position: relative;
+    left: 0px;
+    top: 0px;
+    z-index: 0;
+}
+
+/* Especificaciones de la seccion de navegacion del pie de pagina */
+body footer nav {
+    margin-bottom: 10px;
+}
+
+/* Modificaciones a los links del pie de pagina */
+body footer nav a {
+    margin: 0px 10px 0px;
+}

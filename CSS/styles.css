@@ -1,730 +1,657 @@
-/* Fuente de la pagina */
-@font-face {
-    font-family: 'oswald';
-    src: url('../fonts/Oswald/Oswald-VariableFont_wght.ttf');
-}
-
 * {
-    font-family: 'oswald';
+  font-family: "oswald";
 }
 
 body {
-    background-color: black;
-    color: white;
+  background-color: black;
+  color: white;
 }
 
 header {
-    position: relative;
-    z-index: 1;
+  position: relative;
+  z-index: 1;
 }
 
-/* Especificaciones de los links en el encabezado */
-.container-fluid {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: wrap;
-    background-color: rgb(32, 153, 190);
-    margin: -10px;
-    color: white;
-    left: 0px;
-    top: 0px;
+/* Fuente de la pagina */
+@font-face {
+  font-family: "oswald";
+  src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
 }
-
-
-
-
-/* Especificaciones del logo Boos Music */
 body header nav a img {
-    margin-top: 10px;
-    margin-bottom: -5px;
-    transform: scale(0.8);
+  margin-top: 10px;
+  margin-bottom: -5px;
+  transform: scale(0.8);
 }
 
 body header nav div {
-    display: flex;
-    justify-content: center;
-    flex-grow: 2;
-    gap: 10px;
-    flex-wrap: wrap;
+  display: flex;
+  justify-content: center;
+  flex-grow: 2;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
 /* Especificaciones para las paginas secundarias */
 body header nav div a {
-    position: relative;
-    z-index: 0;
-    color: white;
-    text-decoration: none;
-}
-
-/* ancho de todas las secciones */
-body section {
-    width: 100%;
-}
-
-.video-container {
-    width: 100%;
-    height: 800px;
-    margin-top: -30px;
-    border-radius: 15px;
-    position: relative;
-    overflow: hidden;
-    border-bottom-left-radius: 15px;
-    border-bottom-right-radius: 15px;
-}
-
-/* Especificaciones del video principal */
-.video_principal {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    /* background-size: cover; */
-    object-fit: cover;
-    z-index: -1;
-}
-
-/* Estructura general de todos los banners */
-.banner {
-    display: flex;
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187));
-    width: 100%;
-    height: 200px;
-    justify-content: center;
-    align-items: center;
-    z-index: -1;
-}
-
-/* Estructura independiente del banner para la pagina de principiantes */
-.banner_principiantes {
-    background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187));
-    width: 100%;
-    height: 200px;
-    text-align: center;
-    position: relative;
-    z-index: -1;
-}
-
-.producto {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* Especificaciones de la presentacion para todos los productos  */
-body section article {
-    display: flex;
-    font-weight: bold;
-    flex-direction: column;
-    flex: 2 2 auto;
-    box-shadow: 0px 0px 5px rgb(32, 153, 190);
-    border-radius: 15px;
-    justify-content: center;
-    text-align: center;
-    margin: 30px;
-    width: 500px;
-    color: white;
-}
-
-/* Animaciones para la caja de los articulos */
-body section article:hover {
-    background-color: rgba(255, 255, 255, 0.3);
-    box-shadow: 0px 0px 20px rgb(32, 153, 190);
-}
-
-/* Especificaciones para las imagines de los productos en las cajas de los articulos */
-body section article img {
-    width: 100%;
-    transform: scale(0.5);
-}
-
-/* Animacion para las imagenes de productos */
-body section article img:hover {
-    transform: scale(0.7);
-}
-
-/* Descripcion de la caja de articulos */
-body section article p {
-    margin: 30px 35% 30px;
-    background-color: yellow;
-    color: black;
-    border-radius: 3px;
-}
-
-.contacto-container {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    border: 2px solid rgb(32, 153, 190);
-    min-width: 0px;
-}
-
-/* Parametros de las secciones de contactos */
-.contacto {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    background-color: rgba(75, 82, 88, 0.695);
-    text-align: center;
-    font-size: x-large;
-    min-width: 0px;
-}
-
-#contacto-form {
-    background-color: rgb(75, 82, 88);
-    overflow: hidden;
-}
-
-.form-datos {
-    display: grid;
-    justify-content: center;
-    grid-template-areas:
-        'nombre nombre'
-        'direccion direccion'
-        'telefono email'
-        'asunto asunto'
-        'text-area text-area'
-        'submit reset';
-}
-
-/* Parametros de la seccion de datos */
-.datos {
-    background-color: rgb(75, 82, 88);
-    font-family: 'oswald';
-    text-align: center;
-}
-
-#nombre {
-    grid-area: nombre;
-}
-
-#direccion {
-    grid-area: direccion;
-}
-
-#telefono {
-    grid-area: telefono;
-}
-
-#email {
-    grid-area: email;
-}
-
-#asunto {
-    grid-area: asunto;
-}
-
-#text-area {
-    grid-area: text-area;
-}
-
-#submit {
-    grid-area: submit;
-}
-
-#reset {
-    grid-area: reset;
-}
-
-
-
-/* Caracteristicas de los botones de la seccion de contacto */
-.boton_form {
-    background-color: rgb(32, 153, 190);
-    border-radius: 10px;
-    font-family: 'Oswald';
-}
-
-/* Evitar que se pueda redimensionar la seccion del mensaje en el apartado de contacto */
-textarea {
-    resize: none;
-}
-
-.martis-container {
-    display: flex;
-    flex-direction: column;
-}
-
-/* Especificaciones generales de los contenedores para marcas y artistas */
-.contenedor_martis {
-    display: flex;
-    margin: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 800px;
-    box-shadow: 0px 0px 25px rgb(32, 153, 190);
-    overflow: hidden;
-}
-
-.contenedor_martis_invertido {
-    display: flex;
-    align-items: flex-end;
-    margin: 20px;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 800px;
-    box-shadow: 0px 0px 25px rgb(32, 153, 190);
-    overflow: hidden;
-}
-
-
-.texto-martis {
-    color: white;
-    background: linear-gradient(90deg, transparent, black 30%);
-    height: 50%;
-}
-
-.texto-martis div,
-.texto-martis h2 {
-    max-width: 557px;
-    max-height: 521px;
-    text-align: center;
-}
-
-.texto-martis-invertido {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: black;
-    color: white;
-    background: linear-gradient(270deg, transparent, black 30%);
-    max-height: 800px;
-}
-
-.texto-martis-invertido div,
-.texto-martis-invertido h2 {
-    max-width: 557px;
-    max-height: 521px;
-    text-align: justify;
-}
-
-.texto-martis div::-webkit-scrollbar, .texto-martis-invertido div::-webkit-scrollbar{
-    width: 5px;
-}
-
-.texto-martis div::-webkit-scrollbar-thumb, .texto-martis-invertido div::-webkit-scrollbar-thumb{
-    background: rgb(32, 153, 190);
-    border-radius: 3px;
-}
-
-.texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover{
-    background: rgb(28, 133, 165);
-}
-
-
-/* Imagenes para las marcas */
-.ESP {
-    background-image: url('../img/Marcas/ESP.jpg');
-}
-
-.REVV {
-    background-image: url('../img/Marcas/REVV.webp');
-}
-
-.horizon_devices {
-    background-image: url('../img/Marcas/Horizon_devices.webp');
-}
-
-.fibenare_guitars {
-    background-image: url('../img/Marcas/Fibenare.webp');
-}
-
-/* Imagenes para los artistas */
-.dann_senderovich {
-    background-image: url('../img/Artistas/Dann.webp');
-    background-position: top;
-}
-
-.adrian_bosques {
-    background-image: url('../img/Artistas/Adrian.webp');
-    background-position: top;
-}
-
-.jose_mesta {
-    background-image: url('../img/Artistas/Jose.webp');
-}
-
-.glass_mind {
-    background-image: url('../img/Artistas/Glass.webp');
-    background-position: left;
-}
-
-/* Especificaciones del contenedor principal de la galeria */
-.contenedor_galeria {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187), rgba(0, 0, 0, 0.8));
-}
-
-.img-container {
-    display: grid;
-    grid-template-columns: auto auto auto auto;
-    margin: 15px 30px 15px;
-    justify-content: center;
-    gap: 5px;
-}
-
-
-.videos-youtube {
-    display: grid;
-    grid-template-columns: auto auto;
-    grid-template-rows: 300px 300px;
-    width: 100%;
-    margin: 30px;
-    box-shadow: 0px 0px 30px red;
-}
-
-iframe {
-    border: 2px solid red;
-    width: 100%;
-    height: 100%;
-}
-
-
-
-/* Especificaciones del contenedor principal de las opiniones */
-.contenedor_opiniones {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-    text-decoration: dashed;
-    width: auto;
-    margin: 15px 30px 45px;
-    gap: 30px;
-}
-
-/* Caracteristicas de las opiniones */
-.opinion {
-    display: flex;
-    flex-direction: column;
-    flex: 2 1 20rem;
-    width: 500px;
-    box-shadow: 5px 5px 10px rgb(32, 153, 190);
-    text-align: center;
-}
-
-.opinion p {
-    margin: 0px 30px 15px;
-}
-
-/* Especificaciones de las lineas de separacion */
-hr {
-    height: 2px;
-    width: 100%;
-    background-color: rgb(32, 153, 190);
-    border-color: rgb(32, 153, 190);
-    border-radius: 3px;
-}
-
-.boton-header img {
-    transform: scale(0.1);
-}
-
-.boton-header:hover {
-    background-color: rgb(29, 121, 149);
+  position: relative;
+  z-index: 0;
+  color: white;
+  text-decoration: none;
 }
 
 /* Especificaciones del pie de pagina */
 body footer {
-    text-align: center;
-    color: white;
-    background-color: rgb(32, 153, 190);
-    margin: -10px;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    position: relative;
-    left: 0px;
-    top: 0px;
-    z-index: 0;
+  text-align: center;
+  color: white;
+  background-color: rgb(32, 153, 190);
+  margin: -10px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  position: relative;
+  left: 0px;
+  top: 0px;
+  z-index: 0;
 }
 
 /* Especificaciones de la seccion de navegacion del pie de pagina */
 body footer nav {
-    margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 /* Modificaciones a los links del pie de pagina */
 body footer nav a {
-    margin: 0px 10px 0px;
+  margin: 0px 10px 0px;
+}
+
+.boton-header img {
+  transform: scale(0.1);
+}
+
+.boton-header:hover {
+  background-color: rgb(29, 121, 149);
+}
+
+/* Parametros de las secciones de contactos */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(75, 82, 88, 0.695);
+  text-align: center;
+  font-size: x-large;
+  min-width: 0px;
+}
+
+#contacto-form {
+  background-color: rgb(75, 82, 88);
+  overflow: hidden;
+}
+
+.form-datos {
+  display: grid;
+  justify-content: center;
+  grid-template-areas: "nombre nombre" "direccion direccion" "telefono email" "asunto asunto" "text-area text-area" "submit reset";
+}
+
+/* Parametros de la seccion de datos */
+.datos {
+  background-color: rgb(75, 82, 88);
+  font-family: "oswald";
+  text-align: center;
+}
+
+#nombre {
+  grid-area: nombre;
+}
+
+#direccion {
+  grid-area: direccion;
+}
+
+#telefono {
+  grid-area: telefono;
+}
+
+#email {
+  grid-area: email;
+}
+
+#asunto {
+  grid-area: asunto;
+}
+
+#text-area {
+  grid-area: text-area;
+}
+
+#submit {
+  grid-area: submit;
+}
+
+#reset {
+  grid-area: reset;
+}
+
+/* Caracteristicas de los botones de la seccion de contacto */
+.boton_form {
+  background-color: rgb(32, 153, 190);
+  border-radius: 10px;
+  font-family: "Oswald";
+}
+
+/* Evitar que se pueda redimensionar la seccion del mensaje en el apartado de contacto */
+textarea {
+  resize: none;
+}
+
+.container-fluid {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: rgb(32, 153, 190);
+  margin: -10px;
+  color: white;
+  left: 0px;
+  top: 0px;
 }
 
 /* mobile */
-@media only screen and (max-width:992px){
-
-    body header nav div {
-        justify-content: center;
-        gap: 5px;
-        margin-right: 0px;
-        flex-wrap: wrap;
-    }
-
-    .container-fluid {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        background-color: rgb(32, 153, 190);
-        margin: -10px;
-        color: white;
-        left: 0px;
-        top: 0px;
-    }
-
-    .navbar-nav{
-        text-align: center;
-    }
-
-    .video-container {
-        height: 300px;
-    }
-
-    body section article p {
-        color: black;
-        margin: 30px 30% 30px;
-    }
-
-    body section article:hover {
-        background-color: rgba(138, 129, 129, 0.9);
-        box-shadow: 0px 0px 20px rgb(32, 153, 190);
-    }
-
-    .separador {
-        display: none;
-    }
-
-    .contacto-container {
-        display: flex;
-        flex-direction: column;
-        border: 2px solid rgb(32, 153, 190);
-    }
-
-    .contenedor_martis {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        margin: 0px;
-        box-shadow: 0px 0px 25px rgb(32, 153, 190);
-        overflow: hidden;
-    }
-
-    .contenedor_martis div {
-        height: 50%;
-    }
-
-    .contenedor_martis_invertido {
-        flex-direction: column-reverse;
-        margin: 0px;
-        box-shadow: 0px 0px 25px rgb(32, 153, 190);
-        overflow: hidden;
-    }
-
-    .texto-martis {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        background: linear-gradient(180deg, transparent, black 30%);
-        width: 100%;
-    }
-
-    .texto-martis-invertido {
-        background: linear-gradient(180deg, transparent, black 30%);
-        width: 100%;
-    }
-
-    .texto-martis div {
-        overflow-y: scroll;
-    }
-
-    .texto-martis-invertido div {
-        overflow-y: scroll;
-    }
-
-    .texto-martis div,
-    .texto-martis h2 {
-        margin-left: 15px;
-        margin-right: 15px;
-        text-align: justify;
-    }
-
-    .texto-martis-invertido div,
-    .texto-martis-invertido h2 {
-        margin-left: 15px;
-        margin-right: 15px;
-        text-align: center;
-        text-align: justify;
-    }
-
-    .contenedor_galeria {
-        width: 100%;
-    }
-
-    .img-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto;
-        grid-row: repeat(8, 1fr);
-    }
-
-    .img-container img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .videos-youtube {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(4, 1fr);
-    }
+@media only screen and (max-width: 992px) {
+  body header nav div {
+    justify-content: center;
+    gap: 5px;
+    margin-right: 0px;
+    flex-wrap: wrap;
+  }
+  .container-fluid {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: rgb(32, 153, 190);
+    margin: -10px;
+    color: white;
+    left: 0px;
+    top: 0px;
+  }
+  .navbar-nav {
+    text-align: center;
+  }
+  .video-container {
+    height: 300px;
+  }
+  body section article p {
+    color: black;
+    margin: 30px 30% 30px;
+  }
+  body section article:hover {
+    background-color: rgba(138, 129, 129, 0.9);
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+  }
+  .separador {
+    display: none;
+  }
+  .contacto-container {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid rgb(32, 153, 190);
+  }
+  .contenedor_martis, .contenedor_martis_invertido {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+    overflow: hidden;
+  }
+  .contenedor_martis div, .contenedor_martis_invertido div {
+    height: 50%;
+  }
+  .contenedor_martis_invertido {
+    flex-direction: column-reverse;
+    margin: 0px;
+    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+    overflow: hidden;
+  }
+  .texto-martis {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(180deg, transparent, black 30%);
+    width: 100%;
+  }
+  .texto-martis-invertido {
+    background: linear-gradient(180deg, transparent, black 30%);
+    width: 100%;
+  }
+  .texto-martis div {
+    overflow-y: scroll;
+  }
+  .texto-martis-invertido div {
+    overflow-y: scroll;
+  }
+  .texto-martis div,
+  .texto-martis h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: justify;
+  }
+  .texto-martis-invertido div,
+  .texto-martis-invertido h2 {
+    margin-left: 15px;
+    margin-right: 15px;
+    text-align: center;
+    text-align: justify;
+  }
+  .contenedor_galeria {
+    width: 100%;
+  }
+  .img-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: repeat(8, 1fr);
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .videos-youtube {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(4, 1fr);
+  }
 }
-
 /* desktop */
-
 @media only screen and (min-width: 993px) {
-    body section article p {
-        color: black;
-        margin: 30px 30% 30px;
-    }
-
-    body section article:hover {
-        background-color: rgba(138, 129, 129, 0.9);
-        box-shadow: 0px 0px 20px rgb(32, 153, 190);
-    }
-
-    .contenedor_martis div {
-        height: 100%;
-        width: 50%;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .contenedor_martis_invertido div {
-        height: 100%;
-        width: 50%;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
-    }
-
-    .contenedor_martis, .contenedor_martis_invertido {
-        margin: 15px 100px 15px;
-        box-shadow: 0px 0px 25px rgb(32, 153, 190);
-        overflow: hidden;
-    }
-
-    .texto-martis {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        background: linear-gradient(90deg, transparent, black 30%);
-    }
-
-    .texto-martis-invertido {
-        display: grid;
-        width: 100%;
-        grid-template-columns: repeat(5, 1fr);
-        grid-template-rows: repeat(6, 1fr);
-        background: linear-gradient(270deg, transparent, black 30%);
-    }
-
-    .texto-martis h2 {
-        grid-row: 2/3;
-        grid-column: 3/5;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .texto-martis div {
-        grid-row: 3/6;
-        grid-column: 3/5;
-        width: 100%;
-        align-items: center;
-        text-align: justify;
-        overflow-y: scroll;
-    }
-
-    .texto-martis-invertido h2 {
-        grid-row: 2/3;
-        grid-column: 2/4;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .texto-martis-invertido div {
-        grid-row: 3/6;
-        grid-column: 2/4;
-        width: 100%;
-        align-items: center;
-        text-align: justify;
-        text-align: justify;
-        overflow-y: scroll;
-    }
-
-    .horizon_devices {
-        background-image: url('../img/Marcas/horizon_devices.jpg');
-    }
-
-    .contenedor_galeria {
-        width: 100%;
-    }
-
-    .img-container {
-        width: 100%;
-        display: grid;
-        grid-template-columns: auto;
-        grid-row: repeat(8, 1fr);
-    }
-
-    .img-container img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .videos-youtube {
-        grid-template-columns: auto;
-        grid-template-rows: repeat(2, 400px);
-        grid-template-columns: repeat(2, 50%);
-    }
-
-    .img-container img {
-        width: 100%;
-        height: 100%;
-    }
-
-    .tres {
-        grid-column: 2/5;
-        grid-row: 1/4;
-    }
-
-    .cinco {
-        grid-column: 1/3;
-        grid-row: 4/5;
-    }
-
-    .seis {
-        grid-column: 1/3;
-        grid-row: 5/6;
-    }
-
-    .siete {
-        grid-column: 3/5;
-        grid-row: 4/5;
-    }
-
-    .ocho {
-        grid-column: 3/5;
-        grid-row: 5/6;
-    }
+  body section article p {
+    color: black;
+    margin: 30px 30% 30px;
+  }
+  body section article:hover {
+    background-color: rgba(138, 129, 129, 0.9);
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+  }
+  .contenedor_martis div, .contenedor_martis_invertido div {
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .contenedor_martis_invertido div {
+    height: 100%;
+    width: 50%;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+  }
+  .contenedor_martis,
+  .contenedor_martis_invertido {
+    margin: 15px 100px 15px;
+    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+    overflow: hidden;
+  }
+  .texto-martis {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background: linear-gradient(90deg, transparent, black 30%);
+  }
+  .texto-martis-invertido {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    background: linear-gradient(270deg, transparent, black 30%);
+  }
+  .texto-martis h2 {
+    grid-row: 2/3;
+    grid-column: 3/5;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .texto-martis div {
+    grid-row: 3/6;
+    grid-column: 3/5;
+    width: 100%;
+    align-items: center;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .texto-martis-invertido h2 {
+    grid-row: 2/3;
+    grid-column: 2/4;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .texto-martis-invertido div {
+    grid-row: 3/6;
+    grid-column: 2/4;
+    width: 100%;
+    align-items: center;
+    text-align: justify;
+    text-align: justify;
+    overflow-y: scroll;
+  }
+  .horizon_devices {
+    background-image: url("../img/Marcas/horizon_devices.jpg");
+  }
+  .contenedor_galeria {
+    width: 100%;
+  }
+  .img-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: auto;
+    grid-row: repeat(8, 1fr);
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .videos-youtube {
+    grid-template-columns: auto;
+    grid-template-rows: repeat(2, 400px);
+    grid-template-columns: repeat(2, 50%);
+  }
+  .img-container img {
+    width: 100%;
+    height: 100%;
+  }
+  .tres {
+    grid-column: 2/5;
+    grid-row: 1/4;
+  }
+  .cinco {
+    grid-column: 1/3;
+    grid-row: 4/5;
+  }
+  .seis {
+    grid-column: 1/3;
+    grid-row: 5/6;
+  }
+  .siete {
+    grid-column: 3/5;
+    grid-row: 4/5;
+  }
+  .ocho {
+    grid-column: 3/5;
+    grid-row: 5/6;
+  }
 }
+/* ancho de todas las secciones */
+body section {
+  width: 100%;
+}
+
+.video-container {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Especificaciones del video principal */
+.video_principal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* background-size: cover; */
+  object-fit: cover;
+  z-index: -1;
+}
+
+/* Estructura general de todos los banners */
+.banner {
+  display: flex;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187));
+  width: 100%;
+  height: 200px;
+  justify-content: center;
+  align-items: center;
+  z-index: -1;
+}
+
+/* Estructura independiente del banner para la pagina de principiantes */
+.banner_principiantes {
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187));
+  width: 100%;
+  height: 200px;
+  text-align: center;
+  position: relative;
+  z-index: -1;
+}
+
+.producto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Especificaciones de la presentacion para todos los productos  */
+body section article {
+  display: flex;
+  font-weight: bold;
+  flex-direction: column;
+  flex: 2 2 auto;
+  box-shadow: 0px 0px 5px rgb(32, 153, 190);
+  border-radius: 15px;
+  justify-content: center;
+  text-align: center;
+  margin: 30px;
+  width: 500px;
+  color: white;
+}
+body section article:hover {
+  background-color: rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 0px 20px rgb(32, 153, 190);
+}
+
+/* Especificaciones para las imagines de los productos en las cajas de los articulos */
+body section article img {
+  width: 100%;
+  transform: scale(0.5);
+}
+body section article img:hover {
+  transform: scale(0.7);
+}
+
+/* Descripcion de la caja de articulos */
+body section article p {
+  margin: 30px 35% 30px;
+  background-color: yellow;
+  color: black;
+  border-radius: 3px;
+}
+
+.contacto-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 2px solid rgb(32, 153, 190);
+  min-width: 0px;
+}
+
+.martis-container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Especificaciones generales de los contenedores para marcas y artistas */
+.contenedor_martis, .contenedor_martis_invertido {
+  display: flex;
+  margin: 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  box-shadow: 0px 0px 25px rgb(32, 153, 190);
+  overflow: hidden;
+}
+
+.contenedor_martis_invertido {
+  align-items: flex-end;
+}
+
+.texto-martis {
+  color: white;
+  background: linear-gradient(90deg, transparent, black 30%);
+  height: 50%;
+}
+
+.texto-martis div,
+.texto-martis h2 {
+  max-width: 557px;
+  max-height: 521px;
+  text-align: center;
+}
+
+.texto-martis-invertido {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: black;
+  color: white;
+  background: linear-gradient(270deg, transparent, black 30%);
+  max-height: 800px;
+}
+
+.texto-martis-invertido div,
+.texto-martis-invertido h2 {
+  max-width: 557px;
+  max-height: 521px;
+  text-align: justify;
+}
+
+.texto-martis div::-webkit-scrollbar,
+.texto-martis-invertido div::-webkit-scrollbar {
+  width: 5px;
+}
+
+.texto-martis div::-webkit-scrollbar-thumb,
+.texto-martis-invertido div::-webkit-scrollbar-thumb {
+  background: rgb(32, 153, 190);
+  border-radius: 3px;
+}
+
+.texto-martis div::-webkit-scrollbar-thumb:hover,
+.texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+  background: rgb(28, 133, 165);
+}
+
+/* Imagenes para las marcas */
+.ESP {
+  background-image: url("../img/Marcas/ESP.jpg");
+}
+
+.REVV {
+  background-image: url("../img/Marcas/REVV.webp");
+}
+
+.horizon_devices {
+  background-image: url("../img/Marcas/horizon_devices.webp");
+}
+
+.fibenare_guitars {
+  background-image: url("../img/Marcas/fibenare_guitars.webp");
+}
+
+.dann_senderovich {
+  background-image: url("../img/Artistas/dann_senderovich.webp");
+  background-position: top;
+}
+
+.adrian_bosques {
+  background-image: url("../img/Artistas/adrian_bosques.webp");
+  background-position: top;
+}
+
+.jose_mesta {
+  background-image: url("../img/Artistas/jose_mesta.webp");
+}
+
+.glass_mind {
+  background-image: url("../img/Artistas/glass_mind.webp");
+  background-position: left;
+}
+
+/* Especificaciones del contenedor principal de la galeria */
+.contenedor_galeria {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.8), rgb(189, 187, 187), rgba(0, 0, 0, 0.8));
+}
+
+.img-container {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  margin: 15px 30px 15px;
+  justify-content: center;
+  gap: 5px;
+}
+
+.videos-youtube {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: 300px 300px;
+  width: 100%;
+  margin: 30px;
+  box-shadow: 0px 0px 30px red;
+}
+
+iframe {
+  border: 2px solid red;
+  width: 100%;
+  height: 100%;
+}
+
+/* Especificaciones del contenedor principal de las opiniones */
+.contenedor_opiniones {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  text-decoration: dashed;
+  width: auto;
+  margin: 15px 30px 45px;
+  gap: 30px;
+}
+
+/* Caracteristicas de las opiniones */
+.opinion {
+  display: flex;
+  flex-direction: column;
+  flex: 2 1 20rem;
+  width: 500px;
+  box-shadow: 5px 5px 10px rgb(32, 153, 190);
+  text-align: center;
+}
+
+.opinion p {
+  margin: 0px 30px 15px;
+}
+
+/* Especificaciones de las lineas de separacion */
+hr {
+  height: 2px;
+  width: 100%;
+  background-color: rgb(32, 153, 190);
+  border-color: rgb(32, 153, 190);
+  border-radius: 3px;
+}
+
+/*# sourceMappingURL=styles.css.map */
