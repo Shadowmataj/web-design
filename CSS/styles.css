@@ -1,9 +1,14 @@
+/* Fuente de la pagina */
+@font-face {
+  font-family: "oswald";
+  src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
+}
 * {
   font-family: "oswald";
 }
 
 body {
-  background-color: black;
+  background-color: none;
   color: white;
 }
 
@@ -12,11 +17,6 @@ header {
   z-index: 1;
 }
 
-/* Fuente de la pagina */
-@font-face {
-  font-family: "oswald";
-  src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
-}
 body header nav a img {
   margin-top: 10px;
   margin-bottom: -5px;
@@ -43,7 +43,7 @@ body header nav div a {
 body footer {
   text-align: center;
   color: white;
-  background-color: rgb(32, 153, 190);
+  background-color: none;
   margin: -10px;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
@@ -135,7 +135,7 @@ body footer nav a {
 
 /* Caracteristicas de los botones de la seccion de contacto */
 .boton_form {
-  background-color: rgb(32, 153, 190);
+  background-color: none;
   border-radius: 10px;
   font-family: "Oswald";
 }
@@ -151,11 +151,41 @@ textarea {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  background-color: rgb(32, 153, 190);
+  background-color: none;
   margin: -10px;
   color: white;
   left: 0px;
   top: 0px;
+}
+
+.navbar-toggler {
+  border-width: 5px;
+}
+
+/* ancho de todas las secciones */
+body section {
+  width: 100%;
+}
+
+.video-container {
+  width: 100%;
+  height: 800px;
+  position: relative;
+  overflow: hidden;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
+/* Especificaciones del video principal */
+.video_principal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  /* background-size: cover; */
+  object-fit: cover;
+  z-index: -1;
 }
 
 .banner {
@@ -190,7 +220,7 @@ body section article {
   font-weight: bold;
   flex-direction: column;
   flex: 2 2 auto;
-  box-shadow: 0px 0px 5px rgb(32, 153, 190);
+  box-shadow: 0px 0px 5px none;
   border-radius: 15px;
   justify-content: center;
   text-align: center;
@@ -200,7 +230,7 @@ body section article {
 }
 body section article:hover {
   background-color: rgba(255, 255, 255, 0.3);
-  box-shadow: 0px 0px 20px rgb(32, 153, 190);
+  box-shadow: 0px 0px 20px none;
 }
 
 body section article img {
@@ -223,9 +253,16 @@ body section article p {
 hr {
   height: 2px;
   width: 100%;
-  background-color: rgb(32, 153, 190);
-  border-color: rgb(32, 153, 190);
+  background-color: none;
+  border-color: none;
   border-radius: 3px;
+}
+
+.contacto-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 2px solid none;
+  min-width: 0px;
 }
 
 .martis-container {
@@ -241,7 +278,7 @@ hr {
   background-repeat: no-repeat;
   background-size: cover;
   height: 800px;
-  box-shadow: 0px 0px 25px rgb(32, 153, 190);
+  box-shadow: 0px 0px 25px none;
   overflow: hidden;
 }
 
@@ -251,7 +288,7 @@ hr {
 
 .texto-martis {
   color: white;
-  background: linear-gradient(90deg, transparent, black 30%);
+  background: linear-gradient(90deg, transparent, rgb(139, 67, 67) 30%);
   height: 50%;
 }
 
@@ -287,13 +324,13 @@ hr {
 
 .texto-martis div::-webkit-scrollbar-thumb,
 .texto-martis-invertido div::-webkit-scrollbar-thumb {
-  background: rgb(32, 153, 190);
+  background: none;
   border-radius: 3px;
 }
 
 .texto-martis div::-webkit-scrollbar-thumb:hover,
 .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
-  background: rgb(28, 133, 165);
+  background: none;
 }
 
 /* Imagenes para las marcas */
@@ -346,7 +383,7 @@ hr {
   flex-direction: column;
   flex: 2 1 20rem;
   width: 500px;
-  box-shadow: 5px 5px 10px rgb(32, 153, 190);
+  box-shadow: 5px 5px 10px none;
   text-align: center;
 }
 
@@ -354,6 +391,86 @@ hr {
   margin: 0px 30px 15px;
 }
 
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: black;
+  }
+  .opinion {
+    box-shadow: 5px 5px 10px rgb(71, 13, 100);
+  }
+  .contenedor_martis, .contenedor_martis_invertido {
+    box-shadow: 0px 0px 25px rgb(71, 13, 100);
+  }
+  .texto-martis div::-webkit-scrollbar-thumb,
+  .texto-martis-invertido div::-webkit-scrollbar-thumb {
+    background: rgb(71, 13, 100);
+  }
+  .contacto-container {
+    border: 2px solid rgb(71, 13, 100);
+  }
+  body section article {
+    box-shadow: 0px 0px 5px rgb(71, 13, 100);
+  }
+  body section article:hover {
+    box-shadow: 0px 0px 20px rgb(71, 13, 100);
+  }
+  hr {
+    background-color: rgb(71, 13, 100);
+    border-color: rgb(71, 13, 100);
+  }
+  .container-fluid {
+    background-color: rgb(71, 13, 100);
+  }
+  .boton_form {
+    background-color: rgb(71, 13, 100);
+  }
+  body footer {
+    background-color: rgb(71, 13, 100);
+  }
+  .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+    background: rgb(31, 1, 48);
+  }
+}
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: rgb(204, 203, 203);
+  }
+  .opinion {
+    box-shadow: 5px 5px 10px rgb(32, 153, 190);
+  }
+  .contenedor_martis, .contenedor_martis_invertido {
+    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+  }
+  .texto-martis div::-webkit-scrollbar-thumb,
+  .texto-martis-invertido div::-webkit-scrollbar-thumb {
+    background: rgb(32, 153, 190);
+  }
+  .contacto-container {
+    border: 2px solid rgb(32, 153, 190);
+  }
+  body section article {
+    box-shadow: 0px 0px 5px rgb(32, 153, 190);
+  }
+  body section article:hover {
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+  }
+  hr {
+    background-color: rgb(32, 153, 190);
+    border-color: rgb(32, 153, 190);
+  }
+  .container-fluid {
+    background-color: rgb(32, 153, 190);
+  }
+  .boton_form {
+    background-color: rgb(32, 153, 190);
+  }
+  body footer {
+    background-color: rgb(32, 153, 190);
+  }
+  .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+    background: rgb(28, 133, 165);
+  }
+}
 /* mobile */
 @media only screen and (max-width: 992px) {
   body header nav div {
@@ -368,7 +485,7 @@ hr {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
-    background-color: rgb(32, 153, 190);
+    background-color: none;
     margin: -10px;
     color: white;
     left: 0px;
@@ -386,7 +503,7 @@ hr {
   }
   body section article:hover {
     background-color: rgba(138, 129, 129, 0.9);
-    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+    box-shadow: 0px 0px 20px none;
   }
   .separador {
     display: none;
@@ -394,14 +511,14 @@ hr {
   .contacto-container {
     display: flex;
     flex-direction: column;
-    border: 2px solid rgb(32, 153, 190);
+    border: 2px solid none;
   }
   .contenedor_martis, .contenedor_martis_invertido {
     flex-direction: column;
     justify-content: center;
     align-items: center;
     margin: 0px;
-    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+    box-shadow: 0px 0px 25px none;
     overflow: hidden;
   }
   .contenedor_martis div, .contenedor_martis_invertido div {
@@ -410,7 +527,7 @@ hr {
   .contenedor_martis_invertido {
     flex-direction: column-reverse;
     margin: 0px;
-    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+    box-shadow: 0px 0px 25px none;
     overflow: hidden;
   }
   .texto-martis {
@@ -473,7 +590,7 @@ hr {
   }
   body section article:hover {
     background-color: rgba(138, 129, 129, 0.9);
-    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+    box-shadow: 0px 0px 20px none;
   }
   .contenedor_martis div, .contenedor_martis_invertido div {
     height: 100%;
@@ -492,7 +609,7 @@ hr {
   .contenedor_martis,
   .contenedor_martis_invertido {
     margin: 15px 100px 15px;
-    box-shadow: 0px 0px 25px rgb(32, 153, 190);
+    box-shadow: 0px 0px 25px none;
     overflow: hidden;
   }
   .texto-martis {
