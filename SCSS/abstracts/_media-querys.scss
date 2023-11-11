@@ -10,6 +10,11 @@
     body{
         background-color: black;
     }
+    
+    .articulos:hover {
+        animation: animacion-articulos-dark 1s;
+        animation-fill-mode: forwards;
+    }
 
     .opinion {
         box-shadow: 5px 5px 10px rgb(71, 13, 100);
@@ -68,6 +73,11 @@
 @media (prefers-color-scheme: light){
     body{
         background-color: rgb(63, 84, 96);
+    }
+    
+    .articulos:hover {
+        animation: animacion-articulos-light 1s;
+        animation-fill-mode: forwards;
     }
 
     .opinion {
@@ -157,11 +167,6 @@
         background-color: yellow;
         color: black;
         margin: 30px 30% 30px;
-    }
-
-    .articulos:hover {
-        background-color: rgba(138, 129, 129, 0.9);
-        box-shadow: 0px 0px 20px $color-blueboost;
     }
 
     .separador {
@@ -276,11 +281,6 @@
         background-color: yellow;
         color: black;
         margin: 30px 30% 30px;
-    }
-
-    body section button:hover {
-        background-color: rgba(138, 129, 129, 0.9);
-        box-shadow: 0px 0px 20px $color-blueboost;
     }
 
     .contenedor_martis div {
