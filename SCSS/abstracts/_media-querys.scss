@@ -1,6 +1,10 @@
 
 
-
+/*********************************************************/ 
+/*********************************************************/ 
+/*************************Dark mode***********************/ 
+/*********************************************************/ 
+/*********************************************************/ 
 
 @media (prefers-color-scheme: dark){
     body{
@@ -21,10 +25,13 @@
     
     .contacto-container {
         border: 2px solid rgb(71, 13, 100);
+        border: none;
     }
     
-    body section article {
+    .articulos {
         box-shadow: 0px 0px 5px rgb(71, 13, 100);
+        border-width: 0px;
+        background-color: black;
         
     
         &:hover {
@@ -53,10 +60,14 @@
             background: rgb(31, 1, 48);
         }
 }
-
+/*********************************************************/ 
+/*********************************************************/ 
+/*************************light mode**********************/ 
+/*********************************************************/ 
+/*********************************************************/ 
 @media (prefers-color-scheme: light){
     body{
-        background-color: rgb(204, 203, 203);
+        background-color: rgb(63, 84, 96);
     }
 
     .opinion {
@@ -75,8 +86,10 @@
         border: 2px solid rgb(32, 153, 190);
     }
     
-    body section article {
+    body section button {
         box-shadow: 0px 0px 5px rgb(32, 153, 190);
+        border-width: 0px;
+        background-color: rgb(63, 84, 96);
         
     
         &:hover {
@@ -106,7 +119,11 @@
         }
 }
 
-/* mobile */
+/*********************************************************/ 
+/*********************************************************/ 
+/*************************mobile**************************/ 
+/*********************************************************/ 
+/*********************************************************/ 
 @media only screen and (max-width: 992px) {
     body header nav div {
         justify-content: center;
@@ -136,12 +153,13 @@
         height: 300px;
     }
 
-    body section article p {
+    body section button p {
+        background-color: yellow;
         color: black;
         margin: 30px 30% 30px;
     }
 
-    body section article:hover {
+    .articulos:hover {
         background-color: rgba(138, 129, 129, 0.9);
         box-shadow: 0px 0px 20px $color-blueboost;
     }
@@ -183,11 +201,19 @@
         align-items: center;
         background: linear-gradient(180deg, transparent, black 30%);
         width: 100%;
+        &:hover{
+            animation: animacion-texto-martis-celular 2s;
+            animation-fill-mode: forwards;
+        }
     }
 
     .texto-martis-invertido {
         background: linear-gradient(180deg, transparent, black 30%);
         width: 100%;
+        &:hover{
+            animation: animacion-texto-martis-celular 2s;
+            animation-fill-mode: forwards;
+        }
     }
 
     .texto-martis div {
@@ -239,15 +265,20 @@
     }
 }
 
-/* desktop */
+/*********************************************************/ 
+/*********************************************************/ 
+/*************************desktop*************************/ 
+/*********************************************************/ 
+/*********************************************************/ 
 
 @media only screen and (min-width: 993px) {
-    body section article p {
+    body section button p {
+        background-color: yellow;
         color: black;
         margin: 30px 30% 30px;
     }
 
-    body section article:hover {
+    body section button:hover {
         background-color: rgba(138, 129, 129, 0.9);
         box-shadow: 0px 0px 20px $color-blueboost;
     }

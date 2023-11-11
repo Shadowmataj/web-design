@@ -22,8 +22,11 @@
 
 .texto-martis {
     color: white;
-    background: linear-gradient(90deg, transparent, rgb(139, 67, 67) 30%);
-    height: 50%;
+    
+    &:hover{
+        animation: animacion-texto-martis 1s;
+        animation-fill-mode: forwards;
+    }
 }
 
 .texto-martis div,
@@ -40,8 +43,10 @@
     justify-content: center;
     background-color: black;
     color: white;
-    background: linear-gradient(270deg, transparent, black 30%);
-    max-height: 800px;
+    &:hover{
+        animation: animacion-texto-martis-invertido 2s;
+        animation-fill-mode: forwards;
+    }
 }
 
 .texto-martis-invertido div,

@@ -1,0 +1,27 @@
+@keyframes animacion-texto-martis {
+    from{
+        width: 50%;
+    }
+    to{
+        width: 80%;
+    }
+}
+
+@keyframes animacion-texto-martis-invertido {
+    from {
+        width: 50%;
+    }
+    to {
+        
+        width: 80%;
+    }
+}
+@keyframes animacion-texto-martis-celular {
+    from {
+        height: 50%;
+    }
+    to {
+        
+        height: 100%;
+    }
+} 
