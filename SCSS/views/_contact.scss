@@ -4,3 +4,49 @@
     border: 2px solid $color-blueboost;
     min-width: 0px;
 }
+
+/* Parametros de las secciones de contactos */
+.contacto {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(75, 82, 88, 0.695);
+    text-align: center;
+    font-size: x-large;
+    min-width: 0px;
+}
+
+#contacto-form {
+    background-color: rgb(75, 82, 88);
+    overflow: hidden;
+}
+
+.form-datos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Parametros de la seccion de datos */
+.datos {
+    border-style: solid;
+    margin: 3px;
+    background-color: rgb(75, 82, 88);
+    border-radius: 15px;
+    font-family: "oswald";
+    text-align: center;
+}
+
+/* Caracteristicas de los botones de la seccion de contacto */
+.boton_form {
+    background-color: $color-blueboost;
+    border-radius: 10px;
+    width: 50%;
+    font-family: "Oswald";
+}
+
+.botones-form{
+    display: flex;
+    flex-direction: row;
+}

@@ -3,6 +3,59 @@
   font-family: "oswald";
   src: url("../fonts/Oswald/Oswald-VariableFont_wght.ttf");
 }
+.contacto-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border: 2px solid none;
+  min-width: 0px;
+}
+
+/* Parametros de las secciones de contactos */
+.contacto {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(75, 82, 88, 0.695);
+  text-align: center;
+  font-size: x-large;
+  min-width: 0px;
+}
+
+#contacto-form {
+  background-color: rgb(75, 82, 88);
+  overflow: hidden;
+}
+
+.form-datos {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* Parametros de la seccion de datos */
+.datos {
+  border-style: solid;
+  margin: 3px;
+  background-color: rgb(75, 82, 88);
+  border-radius: 15px;
+  font-family: "oswald";
+  text-align: center;
+}
+
+/* Caracteristicas de los botones de la seccion de contacto */
+.boton_form {
+  background-color: none;
+  border-radius: 10px;
+  width: 50%;
+  font-family: "Oswald";
+}
+
+.botones-form {
+  display: flex;
+  flex-direction: row;
+}
+
 * {
   font-family: "oswald";
 }
@@ -69,80 +122,6 @@ body footer nav a {
 
 .boton-header:hover {
   background-color: rgb(29, 121, 149);
-}
-
-/* Parametros de las secciones de contactos */
-.contacto {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(75, 82, 88, 0.695);
-  text-align: center;
-  font-size: x-large;
-  min-width: 0px;
-}
-
-#contacto-form {
-  background-color: rgb(75, 82, 88);
-  overflow: hidden;
-}
-
-.form-datos {
-  display: grid;
-  justify-content: center;
-  grid-template-areas: "nombre nombre" "direccion direccion" "telefono email" "asunto asunto" "text-area text-area" "submit reset";
-}
-
-/* Parametros de la seccion de datos */
-.datos {
-  background-color: rgb(75, 82, 88);
-  font-family: "oswald";
-  text-align: center;
-}
-
-#nombre {
-  grid-area: nombre;
-}
-
-#direccion {
-  grid-area: direccion;
-}
-
-#telefono {
-  grid-area: telefono;
-}
-
-#email {
-  grid-area: email;
-}
-
-#asunto {
-  grid-area: asunto;
-}
-
-#text-area {
-  grid-area: text-area;
-}
-
-#submit {
-  grid-area: submit;
-}
-
-#reset {
-  grid-area: reset;
-}
-
-/* Caracteristicas de los botones de la seccion de contacto */
-.boton_form {
-  background-color: none;
-  border-radius: 10px;
-  font-family: "Oswald";
-}
-
-/* Evitar que se pueda redimensionar la seccion del mensaje en el apartado de contacto */
-textarea {
-  resize: none;
 }
 
 .container-fluid {
@@ -238,13 +217,6 @@ hr {
   background-color: none;
   border-color: none;
   border-radius: 3px;
-}
-
-.contacto-container {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  border: 2px solid none;
-  min-width: 0px;
 }
 
 .martis-container {
@@ -454,6 +426,14 @@ iframe {
   .boton_form {
     background-color: rgb(71, 13, 100);
   }
+  .datos {
+    border-color: rgb(71, 13, 100);
+    box-shadow: 0px 0px 5px rgb(71, 13, 100);
+  }
+  .datos:focus {
+    animation: animacion-datos-dark 1s;
+    animation-fill-mode: forwards;
+  }
   body footer {
     background-color: rgb(71, 13, 100);
   }
@@ -505,6 +485,14 @@ iframe {
   .boton_form {
     background-color: rgb(32, 153, 190);
   }
+  .datos {
+    border-color: rgb(32, 153, 190);
+    box-shadow: 0px 0px 5px rgb(32, 153, 190);
+  }
+  .datos:focus {
+    animation: animacion-datos-light 1s;
+    animation-fill-mode: forwards;
+  }
   body footer {
     background-color: rgb(32, 153, 190);
   }
@@ -541,6 +529,10 @@ iframe {
   }
   .video-container {
     height: 300px;
+  }
+  .articulos {
+    width: 400px;
+    margin: 15px;
   }
   body section button p {
     background-color: yellow;
@@ -795,6 +787,26 @@ iframe {
   }
   to {
     background-color: rgba(138, 129, 129, 0.9);
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+  }
+}
+@keyframes animacion-datos-dark {
+  from {
+    background-color: rgb(75, 82, 88);
+    box-shadow: 0px 0px 10px rgb(75, 82, 88);
+  }
+  to {
+    background-color: rgb(109, 21, 153);
+    box-shadow: 0px 0px 20px rgb(109, 21, 153);
+  }
+}
+@keyframes animacion-datos-light {
+  from {
+    background-color: rgb(75, 82, 88);
+    box-shadow: 0px 0px 10px rgb(75, 82, 88);
+  }
+  to {
+    background-color: rgb(32, 153, 190);
     box-shadow: 0px 0px 20px rgb(32, 153, 190);
   }
 }

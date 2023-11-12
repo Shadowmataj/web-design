@@ -56,6 +56,15 @@
     .boton_form {
         background-color: rgb(71, 13, 100);
     }
+
+    .datos {
+        border-color: rgb(71, 13, 100);
+        box-shadow: 0px 0px 5px rgb(71, 13, 100);
+        &:focus{
+            animation: animacion-datos-dark 1s;
+            animation-fill-mode: forwards;
+        }
+    }
     
     body footer {
         background-color: rgb(71, 13, 100);
@@ -119,6 +128,15 @@
     .boton_form {
         background-color: rgb(32, 153, 190);
     }
+
+    .datos {
+        border-color: rgb(32, 153, 190);
+        box-shadow: 0px 0px 5px rgb(32, 153, 190);
+        &:focus{
+            animation: animacion-datos-light 1s;
+            animation-fill-mode: forwards;
+        }
+    }
     
     body footer {
         background-color: rgb(32, 153, 190);
@@ -162,6 +180,12 @@
     .video-container {
         height: 300px;
     }
+
+    .articulos{
+        width: 400px;
+        margin: 15px;
+    }
+
 
     body section button p {
         background-color: yellow;

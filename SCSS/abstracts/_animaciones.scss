@@ -48,3 +48,24 @@
     }
 } 
 
+@keyframes animacion-datos-dark {
+    from {
+        background-color: rgb(75, 82, 88);
+        box-shadow: 0px 0px 10px  rgb(75, 82, 88);
+    }
+    to {
+        background-color: rgb(109, 21, 153);
+        box-shadow: 0px 0px 20px rgb(109, 21, 153);
+    }
+} 
+
+@keyframes animacion-datos-light {
+    from {
+        background-color: rgb(75, 82, 88);
+        box-shadow: 0px 0px 10px  rgb(75, 82, 88);
+    }
+    to {
+        background-color: rgb(32, 153, 190);
+        box-shadow: 0px 0px 20px rgb(32, 153, 190);
+    }
+} 
