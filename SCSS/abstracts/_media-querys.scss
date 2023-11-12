@@ -8,7 +8,7 @@
 
 @media (prefers-color-scheme: dark){
     body{
-        background-color: black;
+        background-color: $color-background-darkmode;
     }
     
     .articulos:hover {
@@ -17,49 +17,49 @@
     }
 
     .opinion {
-        box-shadow: 5px 5px 10px rgb(71, 13, 100);
+        box-shadow: 5px 5px 10px $color-layout-darkmode;
     }
     .contenedor_martis {
-        box-shadow: 0px 0px 25px rgb(71, 13, 100);
+        box-shadow: 0px 0px 25px $color-layout-darkmode;
     }
     
     .texto-martis div::-webkit-scrollbar-thumb,
     .texto-martis-invertido div::-webkit-scrollbar-thumb {
-        background: rgb(71, 13, 100);
+        background: $color-layout-darkmode;
     }
     
     .contacto-container {
-        border: 2px solid rgb(71, 13, 100);
+        border: 2px solid $color-layout-darkmode;
         border: none;
     }
     
     .articulos {
-        box-shadow: 0px 0px 5px rgb(71, 13, 100);
+        box-shadow: 0px 0px 5px $color-layout-darkmode;
         border-width: 0px;
         background-color: black;
         
     
         &:hover {
-            box-shadow: 0px 0px 20px rgb(71, 13, 100);
+            box-shadow: 0px 0px 20px $color-layout-darkmode;
         }
     }
     
     hr {
-        background-color: rgb(71, 13, 100);
-        border-color: rgb(71, 13, 100);
+        background-color: $color-layout-darkmode;
+        border-color: $color-layout-darkmode;
     }
     
     .container-fluid {
-        background-color: rgb(71, 13, 100);
+        background-color: $color-layout-darkmode;
     }
     
     .boton_form {
-        background-color: rgb(71, 13, 100);
+        background-color: $color-layout-darkmode;
     }
 
     .datos {
-        border-color: rgb(71, 13, 100);
-        box-shadow: 0px 0px 5px rgb(71, 13, 100);
+        border-color: $color-layout-darkmode;
+        box-shadow: 0px 0px 5px $color-layout-darkmode;
         &:focus{
             outline: none;
             animation: animacion-datos-dark 1s;
@@ -68,7 +68,7 @@
     }
     
     body footer {
-        background-color: rgb(71, 13, 100);
+        background-color: $color-layout-darkmode;
     }
 
     .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
@@ -82,7 +82,7 @@
 /*********************************************************/ 
 @media (prefers-color-scheme: light){
     body{
-        background-color: rgb(63, 84, 96);
+        background-color: $color-background-lightmode;
     }
     
     .articulos:hover {
@@ -91,62 +91,62 @@
     }
 
     .opinion {
-        box-shadow: 5px 5px 10px rgb(32, 153, 190);
+        box-shadow: 5px 5px 10px $color-layout-lightmode;
     }
     .contenedor_martis {
-        box-shadow: 0px 0px 25px rgb(32, 153, 190);
+        box-shadow: 0px 0px 25px $color-layout-lightmode;
     }
     
     .texto-martis div::-webkit-scrollbar-thumb,
     .texto-martis-invertido div::-webkit-scrollbar-thumb {
-        background: rgb(32, 153, 190);
+        background: $color-layout-lightmode;
     }
     
     .contacto-container {
-        border: 2px solid rgb(32, 153, 190);
+        border: 2px solid $color-layout-lightmode;
     }
     
     body section button {
-        box-shadow: 0px 0px 5px rgb(32, 153, 190);
+        box-shadow: 0px 0px 5px $color-layout-lightmode;
         border-width: 0px;
         background-color: rgb(63, 84, 96);
         
     
         &:hover {
-            box-shadow: 0px 0px 20px rgb(32, 153, 190);
+            box-shadow: 0px 0px 20px $color-layout-lightmode;
         }
     }
     
     hr {
-        background-color: rgb(32, 153, 190);
-        border-color: rgb(32, 153, 190);
+        background-color: $color-layout-lightmode;
+        border-color: $color-layout-lightmode;
     }
     
     .container-fluid {
-        background-color: rgb(32, 153, 190);
+        background-color: $color-layout-lightmode;
     }
     
     .boton_form {
-        background-color: rgb(32, 153, 190);
+        background-color: $color-layout-lightmode;
     }
 
     .datos {
-        border-color: rgb(32, 153, 190);
-        box-shadow: 0px 0px 5px rgb(32, 153, 190);
+        border-color: $color-layout-lightmode;
+        box-shadow: 0px 0px 5px $color-layout-lightmode;
         &:focus{
             outline: none;
-            border-color: rgb(28, 133, 165);
+            border-color: $color-layout-lightmode-selected;
             animation: animacion-datos-light 1s;
             animation-fill-mode: forwards;
         }
     }
     
     body footer {
-        background-color: rgb(32, 153, 190);
+        background-color: $color-layout-lightmode;
     }
 
     .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
-            background: rgb(28, 133, 165);
+            background: $color-layout-lightmode-selected;
         }
 }
 
@@ -169,7 +169,6 @@
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-        background-color: $color-blueboost;
         margin: -10px;
         color: white;
         left: 0px;
@@ -203,7 +202,6 @@
     .contacto-container {
         display: flex;
         flex-direction: column;
-        border: 2px solid $color-blueboost;
     }
 
     .contenedor_martis {
@@ -211,7 +209,6 @@
         justify-content: center;
         align-items: center;
         margin: 0px;
-        box-shadow: 0px 0px 25px $color-blueboost;
         overflow: hidden;
     }
 
@@ -222,7 +219,6 @@
     .contenedor_martis_invertido {
         flex-direction: column-reverse;
         margin: 0px;
-        box-shadow: 0px 0px 25px $color-blueboost;
         overflow: hidden;
     }
 
@@ -329,7 +325,6 @@
     .contenedor_martis,
     .contenedor_martis_invertido {
         margin: 15px 100px 15px;
-        box-shadow: 0px 0px 25px $color-blueboost;
         overflow: hidden;
     }
 

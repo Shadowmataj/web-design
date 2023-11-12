@@ -30,6 +30,7 @@
     flex-grow: 2;
     flex-shrink: 1;
     align-items: center;
+    justify-content: center;
     width: 29%;
     border-radius: 15px;
     color: white;
@@ -45,7 +46,5 @@
 hr {
     height: 2px;
     width: 100%;
-    background-color: $color-blueboost;
-    border-color: $color-blueboost;
     border-radius: 3px;
 }

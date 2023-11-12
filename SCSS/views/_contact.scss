@@ -1,7 +1,6 @@
 .contacto-container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    border: 2px solid $color-blueboost;
     min-width: 0px;
 }
 
@@ -40,7 +39,6 @@
 
 /* Caracteristicas de los botones de la seccion de contacto */
 .boton_form {
-    background-color: $color-blueboost;
     border-radius: 10px;
     width: 50%;
     font-family: "Oswald";
