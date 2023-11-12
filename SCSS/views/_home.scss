@@ -1,6 +1,8 @@
 /* ancho de todas las secciones */
-body section {
-    width: 100%;
+body {
+    section {
+        width: 100%;
+    }
 }
 
 .video-container {
@@ -23,4 +25,3 @@ body section {
     object-fit: cover;
     z-index: -1;
 }
-

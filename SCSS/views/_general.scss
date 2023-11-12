@@ -36,11 +36,12 @@
     color: white;
     text-align: center;
 }
-.articulos img{
-    width: 100%;
-    transform: scale(.7);
+.articulos {
+    img {
+        width: 100%;
+        transform: scale(0.7);
+    }
 }
-
 
 /* Especificaciones de las lineas de separacion */
 hr {

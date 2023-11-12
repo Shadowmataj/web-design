@@ -1,21 +1,26 @@
-body header nav a img {
-    margin-top: 10px;
-    margin-bottom: -5px;
-    transform: scale(0.8);
-}
-
-body header nav div {
-    display: flex;
-    justify-content: center;
-    flex-grow: 2;
-    gap: 10px;
-    flex-wrap: wrap;
-}
-
-/* Especificaciones para las paginas secundarias */
-body header nav div a {
-    position: relative;
-    z-index: 0;
-    color: white;
-    text-decoration: none;
+body {
+    header {
+        nav {
+            div {
+                display: flex;
+                justify-content: center;
+                flex-grow: 2;
+                gap: 10px;
+                flex-wrap: wrap;
+                a {
+                    position: relative;
+                    z-index: 0;
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+            a {
+                img {
+                    margin-top: 10px;
+                    margin-bottom: -5px;
+                    transform: scale(0.8);
+                }
+            }
+        }
+    }
 }

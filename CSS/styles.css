@@ -67,12 +67,6 @@ header {
   z-index: 1;
 }
 
-body header nav a img {
-  margin-top: 10px;
-  margin-bottom: -5px;
-  transform: scale(0.8);
-}
-
 body header nav div {
   display: flex;
   justify-content: center;
@@ -80,13 +74,16 @@ body header nav div {
   gap: 10px;
   flex-wrap: wrap;
 }
-
-/* Especificaciones para las paginas secundarias */
 body header nav div a {
   position: relative;
   z-index: 0;
   color: white;
   text-decoration: none;
+}
+body header nav a img {
+  margin-top: 10px;
+  margin-bottom: -5px;
+  transform: scale(0.8);
 }
 
 /* Especificaciones del pie de pagina */
@@ -376,6 +373,9 @@ iframe {
   body {
     background-color: black;
   }
+  body footer {
+    background-color: rgb(71, 13, 100);
+  }
   .articulos:hover {
     animation: animacion-articulos-dark 1s;
     animation-fill-mode: forwards;
@@ -421,10 +421,8 @@ iframe {
     animation: animacion-datos-dark 1s;
     animation-fill-mode: forwards;
   }
-  body footer {
-    background-color: rgb(71, 13, 100);
-  }
-  .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+  .texto-martis div::-webkit-scrollbar-thumb:hover,
+  .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
     background: rgb(31, 1, 48);
   }
 }
@@ -436,6 +434,17 @@ iframe {
 @media (prefers-color-scheme: light) {
   body {
     background-color: rgb(63, 84, 96);
+  }
+  body section button {
+    box-shadow: 0px 0px 5px rgb(32, 153, 190);
+    border-width: 0px;
+    background-color: rgb(63, 84, 96);
+  }
+  body section button:hover {
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
+  }
+  body footer {
+    background-color: rgb(32, 153, 190);
   }
   .articulos:hover {
     animation: animacion-articulos-light 1s;
@@ -453,14 +462,6 @@ iframe {
   }
   .contacto-container {
     border: 2px solid rgb(32, 153, 190);
-  }
-  body section button {
-    box-shadow: 0px 0px 5px rgb(32, 153, 190);
-    border-width: 0px;
-    background-color: rgb(63, 84, 96);
-  }
-  body section button:hover {
-    box-shadow: 0px 0px 20px rgb(32, 153, 190);
   }
   hr {
     background-color: rgb(32, 153, 190);
@@ -482,10 +483,8 @@ iframe {
     animation: animacion-datos-light 1s;
     animation-fill-mode: forwards;
   }
-  body footer {
-    background-color: rgb(32, 153, 190);
-  }
-  .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+  .texto-martis div::-webkit-scrollbar-thumb:hover,
+  .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
     background: rgb(28, 133, 165);
   }
 }
@@ -495,6 +494,11 @@ iframe {
 /*********************************************************/
 /*********************************************************/
 @media only screen and (max-width: 992px) {
+  body section button p {
+    background-color: yellow;
+    color: black;
+    margin: 30px 30% 30px;
+  }
   body header nav div {
     justify-content: center;
     gap: 5px;
@@ -521,11 +525,6 @@ iframe {
   .articulos {
     width: 400px;
     margin: 15px;
-  }
-  body section button p {
-    background-color: yellow;
-    color: black;
-    margin: 30px 30% 30px;
   }
   .separador {
     display: none;

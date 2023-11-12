@@ -1,16 +1,17 @@
+/*********************************************************/
+/*********************************************************/
+/*************************Dark mode***********************/
+/*********************************************************/
+/*********************************************************/
 
-
-/*********************************************************/ 
-/*********************************************************/ 
-/*************************Dark mode***********************/ 
-/*********************************************************/ 
-/*********************************************************/ 
-
-@media (prefers-color-scheme: dark){
-    body{
+@media (prefers-color-scheme: dark) {
+    body {
         background-color: $color-background-darkmode;
+        footer {
+            background-color: $color-layout-darkmode;
+        }
     }
-    
+
     .articulos:hover {
         animation: animacion-articulos-dark 1s;
         animation-fill-mode: forwards;
@@ -22,37 +23,36 @@
     .contenedor_martis {
         box-shadow: 0px 0px 25px $color-layout-darkmode;
     }
-    
+
     .texto-martis div::-webkit-scrollbar-thumb,
     .texto-martis-invertido div::-webkit-scrollbar-thumb {
         background: $color-layout-darkmode;
     }
-    
+
     .contacto-container {
         border: 2px solid $color-layout-darkmode;
         border: none;
     }
-    
+
     .articulos {
         box-shadow: 0px 0px 5px $color-layout-darkmode;
         border-width: 0px;
         background-color: black;
-        
-    
+
         &:hover {
             box-shadow: 0px 0px 20px $color-layout-darkmode;
         }
     }
-    
+
     hr {
         background-color: $color-layout-darkmode;
         border-color: $color-layout-darkmode;
     }
-    
+
     .container-fluid {
         background-color: $color-layout-darkmode;
     }
-    
+
     .boton_form {
         background-color: $color-layout-darkmode;
     }
@@ -60,31 +60,41 @@
     .datos {
         border-color: $color-layout-darkmode;
         box-shadow: 0px 0px 5px $color-layout-darkmode;
-        &:focus{
+        &:focus {
             outline: none;
             animation: animacion-datos-dark 1s;
             animation-fill-mode: forwards;
         }
     }
-    
-    body footer {
-        background-color: $color-layout-darkmode;
+
+    .texto-martis div::-webkit-scrollbar-thumb:hover,
+    .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+        background: rgb(31, 1, 48);
+    }
+}
+/*********************************************************/
+/*********************************************************/
+/*************************light mode**********************/
+/*********************************************************/
+/*********************************************************/
+@media (prefers-color-scheme: light) {
+    body {
+        background-color: $color-background-lightmode;
+        section {
+            button {
+                box-shadow: 0px 0px 5px $color-layout-lightmode;
+                border-width: 0px;
+                background-color: rgb(63, 84, 96);
+                &:hover {
+                    box-shadow: 0px 0px 20px $color-layout-lightmode;
+                }
+            }
+        }
+        footer {
+            background-color: $color-layout-lightmode;
+        }
     }
 
-    .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
-            background: rgb(31, 1, 48);
-        }
-}
-/*********************************************************/ 
-/*********************************************************/ 
-/*************************light mode**********************/ 
-/*********************************************************/ 
-/*********************************************************/ 
-@media (prefers-color-scheme: light){
-    body{
-        background-color: $color-background-lightmode;
-    }
-    
     .articulos:hover {
         animation: animacion-articulos-light 1s;
         animation-fill-mode: forwards;
@@ -96,36 +106,25 @@
     .contenedor_martis {
         box-shadow: 0px 0px 25px $color-layout-lightmode;
     }
-    
+
     .texto-martis div::-webkit-scrollbar-thumb,
     .texto-martis-invertido div::-webkit-scrollbar-thumb {
         background: $color-layout-lightmode;
     }
-    
+
     .contacto-container {
         border: 2px solid $color-layout-lightmode;
     }
-    
-    body section button {
-        box-shadow: 0px 0px 5px $color-layout-lightmode;
-        border-width: 0px;
-        background-color: rgb(63, 84, 96);
-        
-    
-        &:hover {
-            box-shadow: 0px 0px 20px $color-layout-lightmode;
-        }
-    }
-    
+
     hr {
         background-color: $color-layout-lightmode;
         border-color: $color-layout-lightmode;
     }
-    
+
     .container-fluid {
         background-color: $color-layout-lightmode;
     }
-    
+
     .boton_form {
         background-color: $color-layout-lightmode;
     }
@@ -133,34 +132,46 @@
     .datos {
         border-color: $color-layout-lightmode;
         box-shadow: 0px 0px 5px $color-layout-lightmode;
-        &:focus{
+        &:focus {
             outline: none;
             border-color: $color-layout-lightmode-selected;
             animation: animacion-datos-light 1s;
             animation-fill-mode: forwards;
         }
     }
-    
-    body footer {
-        background-color: $color-layout-lightmode;
-    }
 
-    .texto-martis div::-webkit-scrollbar-thumb:hover, .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
-            background: $color-layout-lightmode-selected;
-        }
+    .texto-martis div::-webkit-scrollbar-thumb:hover,
+    .texto-martis-invertido div::-webkit-scrollbar-thumb:hover {
+        background: $color-layout-lightmode-selected;
+    }
 }
 
-/*********************************************************/ 
-/*********************************************************/ 
-/*************************mobile**************************/ 
-/*********************************************************/ 
-/*********************************************************/ 
+/*********************************************************/
+/*********************************************************/
+/*************************mobile**************************/
+/*********************************************************/
+/*********************************************************/
 @media only screen and (max-width: 992px) {
-    body header nav div {
-        justify-content: center;
-        gap: 5px;
-        margin-right: 0px;
-        flex-wrap: wrap;
+    body {
+        section {
+            button {
+                p {
+                    background-color: yellow;
+                    color: black;
+                    margin: 30px 30% 30px;
+                }
+            }
+        }
+        header {
+            nav {
+                div {
+                    justify-content: center;
+                    gap: 5px;
+                    margin-right: 0px;
+                    flex-wrap: wrap;
+                }
+            }
+        }
     }
 
     .container-fluid {
@@ -183,16 +194,9 @@
         height: 300px;
     }
 
-    .articulos{
+    .articulos {
         width: 400px;
         margin: 15px;
-    }
-
-
-    body section button p {
-        background-color: yellow;
-        color: black;
-        margin: 30px 30% 30px;
     }
 
     .separador {
@@ -212,8 +216,10 @@
         overflow: hidden;
     }
 
-    .contenedor_martis div {
-        height: 50%;
+    .contenedor_martis {
+        div {
+            height: 50%;
+        }
     }
 
     .contenedor_martis_invertido {
@@ -229,7 +235,7 @@
         align-items: center;
         background: linear-gradient(180deg, transparent, black 30%);
         width: 100%;
-        &:hover{
+        &:hover {
             animation: animacion-texto-martis-celular 2s;
             animation-fill-mode: forwards;
         }
@@ -238,33 +244,41 @@
     .texto-martis-invertido {
         background: linear-gradient(180deg, transparent, black 30%);
         width: 100%;
-        &:hover{
+        &:hover {
             animation: animacion-texto-martis-celular 2s;
             animation-fill-mode: forwards;
         }
     }
 
-    .texto-martis div {
-        overflow-y: scroll;
+    .texto-martis {
+        div {
+            overflow-y: scroll;
+        }
     }
 
-    .texto-martis-invertido div {
-        overflow-y: scroll;
+    .texto-martis-invertido {
+        div {
+            overflow-y: scroll;
+        }
     }
 
-    .texto-martis div,
-    .texto-martis h2 {
-        margin-left: 15px;
-        margin-right: 15px;
-        text-align: justify;
+    .texto-martis {
+        div,
+        h2 {
+            margin-left: 15px;
+            margin-right: 15px;
+            text-align: justify;
+        }
     }
 
-    .texto-martis-invertido div,
-    .texto-martis-invertido h2 {
-        margin-left: 15px;
-        margin-right: 15px;
-        text-align: center;
-        text-align: justify;
+    .texto-martis-invertido {
+        div,
+        h2 {
+            margin-left: 15px;
+            margin-right: 15px;
+            text-align: center;
+            text-align: justify;
+        }
     }
 
     .horizon_devices {
@@ -282,9 +296,11 @@
         grid-row: repeat(8, 1fr);
     }
 
-    .img-container img {
-        width: 100%;
-        height: 100%;
+    .img-container {
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
 
     .videos-youtube {
@@ -293,33 +309,43 @@
     }
 }
 
-/*********************************************************/ 
-/*********************************************************/ 
-/*************************desktop*************************/ 
-/*********************************************************/ 
-/*********************************************************/ 
+/*********************************************************/
+/*********************************************************/
+/*************************desktop*************************/
+/*********************************************************/
+/*********************************************************/
 
 @media only screen and (min-width: 993px) {
-    body section button p {
-        background-color: yellow;
-        color: black;
-        margin: 30px 30% 30px;
+    body {
+        section {
+            button {
+                p {
+                    background-color: yellow;
+                    color: black;
+                    margin: 30px 30% 30px;
+                }
+            }
+        }
     }
 
-    .contenedor_martis div {
-        height: 100%;
-        width: 50%;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+    .contenedor_martis {
+        div {
+            height: 100%;
+            width: 50%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
     }
 
-    .contenedor_martis_invertido div {
-        height: 100%;
-        width: 50%;
-        align-items: center;
-        text-align: center;
-        justify-content: center;
+    .contenedor_martis_invertido {
+        div {
+            height: 100%;
+            width: 50%;
+            align-items: center;
+            text-align: center;
+            justify-content: center;
+        }
     }
 
     .contenedor_martis,
@@ -344,39 +370,41 @@
         background: linear-gradient(270deg, transparent, black 30%);
     }
 
-    .texto-martis h2 {
-        grid-row: 2/3;
-        grid-column: 3/5;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
+    .texto-martis {
+        h2 {
+            grid-row: 2/3;
+            grid-column: 3/5;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+            grid-row: 3/6;
+            grid-column: 3/5;
+            width: 100%;
+            align-items: center;
+            text-align: justify;
+            overflow-y: scroll;
+        }
     }
 
-    .texto-martis div {
-        grid-row: 3/6;
-        grid-column: 3/5;
-        width: 100%;
-        align-items: center;
-        text-align: justify;
-        overflow-y: scroll;
-    }
-
-    .texto-martis-invertido h2 {
-        grid-row: 2/3;
-        grid-column: 2/4;
-        text-align: center;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .texto-martis-invertido div {
-        grid-row: 3/6;
-        grid-column: 2/4;
-        width: 100%;
-        align-items: center;
-        text-align: justify;
-        text-align: justify;
-        overflow-y: scroll;
+    .texto-martis-invertido {
+        h2 {
+            grid-row: 2/3;
+            grid-column: 2/4;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+        div {
+            grid-row: 3/6;
+            grid-column: 2/4;
+            width: 100%;
+            align-items: center;
+            text-align: justify;
+            text-align: justify;
+            overflow-y: scroll;
+        }
     }
 
     .horizon_devices {
@@ -435,5 +463,3 @@
         grid-row: 5/6;
     }
 }
-
-

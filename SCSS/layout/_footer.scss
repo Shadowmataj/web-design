@@ -12,11 +12,17 @@ body footer {
 }
 
 /* Especificaciones de la seccion de navegacion del pie de pagina */
-body footer nav {
-    margin-bottom: 10px;
+body footer {
+    nav {
+        margin-bottom: 10px;
+    }
 }
 
 /* Modificaciones a los links del pie de pagina */
-body footer nav a {
-    margin: 0px 10px 0px;
+body footer {
+    nav {
+        a {
+            margin: 0px 10px 0px;
+        }
+    }
 }
