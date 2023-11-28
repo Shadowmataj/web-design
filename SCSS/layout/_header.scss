@@ -2,8 +2,17 @@
     img {
         transform: scale(0.1);
     }
+
 }
 
 .boton-header:hover {
     background-color: rgb(29, 121, 149);
+}
+
+header{
+    nav{
+        width: 100%;
+        margin: none;
+        padding: 100%;
+    }
 }
