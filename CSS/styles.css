@@ -36,10 +36,11 @@
 .datos {
   border-style: solid;
   margin: 3px;
-  background-color: rgb(75, 82, 88);
+  background-color: white;
   border-radius: 15px;
   font-family: "oswald";
   text-align: center;
+  color: black;
 }
 
 /* Caracteristicas de los botones de la seccion de contacto */
@@ -186,9 +187,11 @@ header nav {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;
+  margin: 15px;
 }
 
 .articulos {
+  position: relative;
   display: flex;
   flex-direction: column;
   flex-grow: 2;
@@ -199,11 +202,26 @@ header nav {
   border-radius: 15px;
   color: white;
   text-align: center;
+  padding-bottom: 50px;
 }
-
 .articulos img {
   width: 100%;
   transform: scale(0.7);
+}
+
+.compras {
+  position: absolute;
+  bottom: 0px;
+  margin: none;
+  border-bottom-left-radius: 15px;
+  border-bottom-right-radius: 15px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-bottom: 10px;
+  padding-top: 10px;
 }
 
 /* Especificaciones de las lineas de separacion */
@@ -379,9 +397,23 @@ iframe {
   body footer {
     background-color: rgb(71, 13, 100);
   }
+  .articulos {
+    box-shadow: 0px 0px 5px rgb(71, 13, 100);
+    border-width: 0px;
+    background-color: black;
+  }
   .articulos:hover {
+    box-shadow: 0px 0px 20px rgb(71, 13, 100);
     animation: animacion-articulos-dark 1s;
     animation-fill-mode: forwards;
+  }
+  .compras {
+    background-color: rgba(71, 13, 100, 0.3);
+  }
+  .buy-button {
+    background-color: rgb(71, 13, 100);
+    border-radius: 5px;
+    color: white;
   }
   .opinion {
     box-shadow: 5px 5px 10px rgb(71, 13, 100);
@@ -396,14 +428,6 @@ iframe {
   .contacto-container {
     border: 2px solid rgb(71, 13, 100);
     border: none;
-  }
-  .articulos {
-    box-shadow: 0px 0px 5px rgb(71, 13, 100);
-    border-width: 0px;
-    background-color: black;
-  }
-  .articulos:hover {
-    box-shadow: 0px 0px 20px rgb(71, 13, 100);
   }
   hr {
     background-color: rgb(71, 13, 100);
@@ -449,9 +473,22 @@ iframe {
   body footer {
     background-color: rgb(32, 153, 190);
   }
+  .articulos {
+    box-shadow: 0px 0px 5px rgb(32, 153, 190);
+    border-width: 0px;
+  }
   .articulos:hover {
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
     animation: animacion-articulos-light 1s;
     animation-fill-mode: forwards;
+  }
+  .compras {
+    background-color: rgba(32, 153, 190, 0.3);
+  }
+  .buy-button {
+    background-color: rgb(32, 153, 190);
+    border-radius: 5px;
+    color: white;
   }
   .opinion {
     box-shadow: 5px 5px 10px rgb(32, 153, 190);
@@ -767,30 +804,26 @@ iframe {
 }
 @keyframes animacion-articulos-light {
   from {
-    background-color: inherit;
     box-shadow: 0px 0px 10px rgb(71, 13, 100);
   }
   to {
-    background-color: rgba(138, 129, 129, 0.9);
     box-shadow: 0px 0px 20px rgb(32, 153, 190);
   }
 }
 @keyframes animacion-datos-dark {
   from {
-    background-color: rgb(75, 82, 88);
     box-shadow: 0px 0px 10px rgb(75, 82, 88);
   }
   to {
-    background-color: rgb(109, 21, 153);
     box-shadow: 0px 0px 20px rgb(109, 21, 153);
   }
 }
 @keyframes animacion-datos-light {
   from {
-    background-color: rgb(75, 82, 88);
+    box-shadow: 0px 0px 10px rgb(75, 82, 88);
   }
   to {
-    background-color: rgb(32, 153, 190);
+    box-shadow: 0px 0px 20px rgb(32, 153, 190);
   }
 }
 

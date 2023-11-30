@@ -5,7 +5,6 @@
 /*********************************************************/
 
 @media (prefers-color-scheme: dark) {
-    $success: $color-background-darkmode;
     body {
         background-color: $color-background-darkmode;
         footer {
@@ -13,9 +12,25 @@
         }
     }
 
-    .articulos:hover {
-        animation: animacion-articulos-dark 1s;
-        animation-fill-mode: forwards;
+    .articulos {
+        box-shadow: 0px 0px 5px $color-layout-darkmode;
+        border-width: 0px;
+        background-color: black;
+
+        &:hover {
+            box-shadow: 0px 0px 20px $color-layout-darkmode;
+            animation: animacion-articulos-dark 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .compras{
+        background-color: $color-layout-trasparentdark;
+    }
+    .buy-button{
+        background-color: $color-layout-darkmode;
+        border-radius: 5px;
+        color: white;
     }
 
     .opinion {
@@ -35,15 +50,7 @@
         border: none;
     }
 
-    .articulos {
-        box-shadow: 0px 0px 5px $color-layout-darkmode;
-        border-width: 0px;
-        background-color: black;
-
-        &:hover {
-            box-shadow: 0px 0px 20px $color-layout-darkmode;
-        }
-    }
+    
 
     hr {
         background-color: $color-layout-darkmode;
@@ -95,10 +102,28 @@
             background-color: $color-layout-lightmode;
         }
     }
+    .articulos {
+        box-shadow: 0px 0px 5px $color-layout-lightmode;
+        border-width: 0px;
 
-    .articulos:hover {
-        animation: animacion-articulos-light 1s;
-        animation-fill-mode: forwards;
+        &:hover {
+            box-shadow: 0px 0px 20px $color-layout-lightmode;
+            animation: animacion-articulos-light 1s;
+            animation-fill-mode: forwards;
+        }
+    }
+
+    .compras{
+        background-color: $color-layout-trasparentlight;
+    }
+
+    .buy-button{
+        background-color: $color-layout-lightmode;
+        border-radius: 5px;
+        color: white;
+        &:hover{
+            
+        }
     }
 
     .opinion {

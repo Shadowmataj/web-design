@@ -22,9 +22,11 @@
     display: flex;
     flex-wrap: wrap;
     gap: 30px;
+    margin: 15px;
 }
 
 .articulos {
+    position: relative;
     display: flex;
     flex-direction: column;
     flex-grow: 2;
@@ -35,12 +37,28 @@
     border-radius: 15px;
     color: white;
     text-align: center;
-}
-.articulos {
+
+    padding-bottom: 50px;
+    
     img {
         width: 100%;
         transform: scale(0.7);
     }
+}
+
+.compras{
+    position: absolute;
+    bottom: 0px;
+    margin: none;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-bottom: 10px;
+    padding-top: 10px;
 }
 
 /* Especificaciones de las lineas de separacion */

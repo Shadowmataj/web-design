@@ -2,14 +2,14 @@ $page-look: dark;
 
 $color-background-darkmode: black;
 $color-layout-darkmode: rgb(71, 13, 100);
+$color-layout-trasparentdark: rgba(71, 13, 100, 0.3);
 $color-layout-darkmode-selected: rgb(31, 1, 48);
 
 $color-background-lightmode: rgb(63, 84, 96);
 $color-layout-lightmode: rgb(32, 153, 190);
+$color-layout-trasparentlight: rgba(32, 153, 190, 0.3);
 $color-layout-lightmode-selected: rgb(28, 133, 165);
 
 $var-form: nombre, direccion, telefono, email, asunto, text-area, submit, reset;
 $var-marcas: REVV, fibenare_guitars;
 $var-artistas: dann_senderovich, adrian_bosques, jose_mesta, glass_mind;
-
-$success: rgb(71, 13, 100);
