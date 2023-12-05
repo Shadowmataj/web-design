@@ -204,6 +204,10 @@ header nav {
   text-align: center;
   padding-bottom: 50px;
 }
+.articulos strong {
+  position: absolute;
+  top: 5px;
+}
 .articulos img {
   width: 100%;
   transform: scale(0.7);

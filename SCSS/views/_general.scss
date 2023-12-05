@@ -39,7 +39,10 @@
     text-align: center;
 
     padding-bottom: 50px;
-    
+    & strong{
+        position: absolute;
+        top: 5px;
+    }
     img {
         width: 100%;
         transform: scale(0.7);
