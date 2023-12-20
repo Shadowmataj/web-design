@@ -43,9 +43,7 @@
         position: absolute;
         top: 5px;
     }
-    img {
-        position: absolute;
-        top: 15px;
+    & img {
         width: 100%;
         transform: scale(0.7);
     }

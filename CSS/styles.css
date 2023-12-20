@@ -567,6 +567,7 @@ iframe {
   }
   .articulos {
     width: 400px;
+    min-height: 260px;
     margin: 15px;
   }
   .separador {
@@ -831,4 +832,4 @@ iframe {
   }
 }
 
-/*# sourceMappingURL=styles.css.map */
+/*# sourceMappingURL=styles.CSS.map */
