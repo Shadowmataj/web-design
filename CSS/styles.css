@@ -211,6 +211,7 @@ header nav {
 .articulos img {
   width: 100%;
   transform: scale(0.7);
+  padding-top: 10px;
 }
 
 .compras {
@@ -569,6 +570,10 @@ iframe {
     width: 400px;
     min-height: 260px;
     margin: 15px;
+  }
+  .articulos img {
+    min-height: 100px;
+    min-width: 310px;
   }
   .separador {
     display: none;

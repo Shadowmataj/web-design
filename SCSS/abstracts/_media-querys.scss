@@ -223,6 +223,11 @@
         width: 400px;
         min-height: 260px;
         margin: 15px;
+
+        & img{
+            min-height: 100px;
+            min-width: 310px;
+        }
         
     }
 
