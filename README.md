@@ -16,4 +16,4 @@ Así como las siguientes herramientas:
 
 Es un desarrollo sencillo, pero que toma todo el sentido en mi integración con react, así como al implementar bases de datos. 
 
-### [DEPLOYMENT] (https://shadowmataj.github.io/web-design/)
+### [DEPLOYMENT](https://shadowmataj.github.io/web-design/)
